@@ -1,0 +1,10 @@
+[color]
+	ui = true
+[user]
+	name = CloudNiner
+	email = andrew.fink.11@gmail.com
+[core]
+	editor = /usr/bin/vim
+    excludesfile = ~/.gitignore
+[push]
+	default = simple
