@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd `dirname $0`
+THIS_DIR=`dirname $0`
+cd $THIS_DIR 
+SRC_DIR=`pwd`
 
-ln -sv ./tmux.conf ../.tmux.conf
+ln -sv $SRC_DIR/tmux.conf ~/.tmux.conf
 
