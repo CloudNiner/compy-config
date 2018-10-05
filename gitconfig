@@ -2,7 +2,7 @@
 	ui = true
 [user]
 	name = CloudNiner
-	email = andrew@cloudniner.co 
+	email = andy@finkmiller.com
 [core]
 	editor = /usr/bin/vim
     excludesfile = ~/.gitignore
