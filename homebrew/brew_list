@@ -37,6 +37,7 @@ readline
 sbt
 scala
 sqlite
+tippecanoe
 tmux
 wget
 xz
