@@ -9,6 +9,7 @@ git_to_top() {
 export PS1="\u@\h \w\$(parse_git_branch): "
 
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Bash completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
@@ -26,3 +27,4 @@ export NVM_DIR="$HOME/.nvm"
 alias vup="vagrant up"
 alias vssh="vagrant ssh"
 alias http-jwt="http --auth-type=jwt"
+
