@@ -8,8 +8,6 @@ git_to_top() {
 
 export PS1="\u@\h \w\$(parse_git_branch): "
 
-set -o vi
-
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Bash completion
