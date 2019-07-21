@@ -1,4 +1,7 @@
+autoconf
+automake
 bash-completion
+carthage
 curl
 ffsend
 freexl
@@ -24,6 +27,7 @@ libpng
 libpq
 libspatialite
 libtiff
+libtool
 libunistring
 libxml2
 node@8
