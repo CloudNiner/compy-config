@@ -23,6 +23,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Haskell
+export PATH=~/.local/bin:$PATH
+export PATH=$(stack path --compiler-bin):$PATH  # Workaround for error in vscode: https://github.com/alanz/vscode-hie-server/issues/128
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Aliases
 alias vup="vagrant up"
 alias vssh="vagrant ssh"
