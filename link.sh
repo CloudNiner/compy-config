@@ -1,7 +1,7 @@
 #!/bin/bash
 
 THIS_DIR=`dirname $0`
-cd $THIS_DIR 
+cd $THIS_DIR
 SRC_DIR=`pwd`
 
 # TMUX
@@ -14,3 +14,6 @@ ln -sv $SRC_DIR/gitconfig ~/.gitconfig
 # Bash Profile
 ln -sv $SRC_DIR/bash_profile ~/.bash_profile
 
+# ZSH
+ln -sv $SRC_DIR/zsh/.zshenv ~/.zshenv
+ln -sv $SRC_DIR/.hushlogin ~/.hushlogin
