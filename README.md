@@ -10,6 +10,8 @@ Run link.sh and MAGIC.
 defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
 # Key Repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
+# Screenshots directory
+mkdir ~/Screenshots && defaults write com.apple.screencapture location ~/Screenshots
 ```
 
 #### TODO
