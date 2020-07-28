@@ -7,6 +7,12 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
 # Haskell
 export PATH=~/.local/bin:$PATH
 # Node version manager (NVM)
@@ -15,10 +21,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# virtualenvwrapper
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
 
 # zsh shell correction settings
 setopt CORRECT
@@ -105,7 +107,7 @@ ZSH_CUSTOM=$HOME/src/compy-config/zsh/zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 # You may need to delete ZDOTDIR/.zcompdump* after adding an autocomplete plugin
 # to include its changes.
-plugins=(aws docker git httpie nvm osx virtualenvwrapper vscode)
+plugins=(aws docker git httpie nvm osx vscode)
 
 source $ZSH/oh-my-zsh.sh
 
