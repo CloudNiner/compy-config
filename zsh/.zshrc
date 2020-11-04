@@ -17,7 +17,9 @@ fi
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
+  # Expensive, only provides auto venv activations when cd'ing to dir
+  # Re-enable if useful
+  # eval "$(pyenv virtualenv-init -)"
 fi
 
 # >>> conda initialize >>>
@@ -120,4 +122,5 @@ alias vup="vagrant up"
 alias vssh="vagrant ssh"
 alias http-jwt="http --auth-type=jwt"
 alias swagger-codegen="java -jar ~/bin/swagger-codegen-cli.jar"
+alias qgis="open -a $(ls /Applications | grep QGIS)"
 
