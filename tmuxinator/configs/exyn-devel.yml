@@ -1,0 +1,15 @@
+name: exyn-devel
+windows:
+  - devel:
+      layout: tiled
+      panes:
+        - docker:
+          - ssh exyn
+          - cd ~/workspaces/devel
+          - . ~/.bash_aliases_exyn_workspaces
+          - exd-start
+          - exd-i
+        - shell:
+          - ssh exyn
+          - cd ~/workspaces/devel
+          - . ~/.bash_aliases_exyn_workspaces
