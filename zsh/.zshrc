@@ -14,28 +14,11 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
-# pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-  # Expensive, only provides auto venv activations when cd'ing to dir
-  # Re-enable if useful
-  # eval "$(pyenv virtualenv-init -)"
-fi
-
-# Haskell
-export PATH=~/.local/bin:$PATH
-
-# Node version manager (NVM)
-export NVM_DIR="$HOME/.nvm"
-# settings for zsh-nvm plugin
-export NVM_COMPLETION=true
-export NVM_LAZY_LOAD=true
+# asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# Java Jabba
-[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 # zsh shell correction settings
 setopt CORRECT
@@ -83,7 +66,7 @@ ZSH_CUSTOM=$HOME/src/compy-config/zsh/zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 # You may need to delete ZDOTDIR/.zcompdump* after adding an autocomplete plugin
 # to include its changes.
-plugins=(zsh-nvm aws docker git httpie osx vscode)
+plugins=(aws docker git httpie macos vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,9 +86,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vup="vagrant up"
-alias vssh="vagrant ssh"
-alias http-jwt="http --auth-type=jwt"
-alias swagger-codegen="java -jar ~/bin/swagger-codegen-cli.jar"
-alias qgis="open -a $(ls /Applications | grep QGIS)"
-
