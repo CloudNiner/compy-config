@@ -5,9 +5,10 @@
 	email = andy@finkmiller.com
 [core]
 	editor = /usr/bin/vim
-    excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 [push]
 	default = simple
+        autoSetupRemote = true
 [pull]
 	rebase = false
 [merge]
