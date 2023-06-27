@@ -6,7 +6,6 @@ SRC_DIR=$(pwd)
 
 # TMUX
 ln -sv "$SRC_DIR"/tmux.conf ~/.tmux.conf
-ln -sv "$SRC_DIR"/tmuxinator/configs ~/.tmuxinator
 
 # GIT
 ln -sv "$SRC_DIR"/gitignore ~/.gitignore

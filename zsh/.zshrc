@@ -15,10 +15,7 @@ if type brew &>/dev/null; then
 fi
 
 # asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
-
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # zsh shell correction settings
 setopt CORRECT
@@ -66,7 +63,7 @@ ZSH_CUSTOM=$HOME/src/compy-config/zsh/zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 # You may need to delete ZDOTDIR/.zcompdump* after adding an autocomplete plugin
 # to include its changes.
-plugins=(aws docker git httpie macos vscode)
+plugins=(aws git httpie macos vscode)
 
 source $ZSH/oh-my-zsh.sh
 
