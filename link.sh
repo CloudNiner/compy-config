@@ -17,3 +17,6 @@ ln -sv "$SRC_DIR"/bash_profile ~/.bash_profile
 # ZSH
 ln -sv "$SRC_DIR"/zsh/.zshenv ~/.zshenv
 ln -sv "$SRC_DIR"/.hushlogin ~/.hushlogin
+
+# psql
+ln -sv "$SRC_DIR"/psqlrc ~/.psqlrc
