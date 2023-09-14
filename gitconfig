@@ -6,17 +6,24 @@
 [core]
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore
-[push]
-	default = simple
-        autoSetupRemote = true
-[pull]
-	rebase = false
+[delta]
+	navigate = true
+	syntax-theme = Dracula
+[diff]
+	colorMoved = default
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
 [merge]
 	conflictstyle = diff3
+[pull]
+	rebase = false
+[push]
+	default = simple
+	autoSetupRemote = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[init]
-	defaultBranch = main
