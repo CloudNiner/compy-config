@@ -7,15 +7,26 @@ export EDITOR='vim'
 
 # Path changes
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="~/.local/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# Brew on Apple Silicon
+export PATH=/opt/homebrew/bin:$PATH
 
 # Brew completions - now packaged with brew, not in oh-my-zsh
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # zsh shell correction settings
 setopt CORRECT
@@ -68,6 +79,9 @@ plugins=(aws git httpie macos vscode)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# Poetry Settings
+POETRY_VIRTUALENVS_IN_PROJECT=true
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
