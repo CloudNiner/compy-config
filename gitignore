@@ -1,16 +1,21 @@
+# MacOS
 .DS_Store
 __MACOSX
 *.swp
+
+# VSCode
 .vscode
+
+#IntelliJ
 .idea
+
+# Scala
 .metals
 .bloop
 
-# Ensime
-ensime.sbt
-.ensime
-.ensime_cache
-
 # Docker env files
 set-env.sh
+
+# Python
+.venv
 
