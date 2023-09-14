@@ -12,6 +12,9 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Brew on Apple Silicon
 export PATH=/opt/homebrew/bin:$PATH
 
+# User Docker installation
+export PATH=$HOME/.docker/bin:$PATH
+
 # Brew completions - now packaged with brew, not in oh-my-zsh
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -21,7 +24,7 @@ fi
 eval "$(direnv hook zsh)"
 
 # asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -74,7 +77,7 @@ ZSH_CUSTOM=$HOME/src/compy-config/zsh/zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 # You may need to delete ZDOTDIR/.zcompdump* after adding an autocomplete plugin
 # to include its changes.
-plugins=(aws git httpie macos vscode)
+plugins=(aws docker git httpie macos vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,5 +98,13 @@ POETRY_VIRTUALENVS_IN_PROJECT=true
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/src/compy-config/zsh/.zshrc"
+
+tmuxgo () {
+  tmux new-session -A -s "$(basename $(pwd))"
+}
+
+tmuxbranch () {
+  tmux new-session -A -s "$(git rev-parse --abbrev-ref HEAD)"
+}
+
