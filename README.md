@@ -9,3 +9,15 @@ Run link.sh and MAGIC.
 ./macos.config.sh
 ```
 
+# Install core tools via Brew
+
+```shell
+xargs brew install < brew.txt
+```
+
+Update the list with:
+
+```shell
+brew leaves > brew.txt
+```
+

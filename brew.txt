@@ -1,0 +1,7 @@
+asdf
+direnv
+git
+pipx
+pyenv
+tmux
+wget
