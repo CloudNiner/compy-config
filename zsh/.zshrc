@@ -7,7 +7,7 @@ export EDITOR='vim'
 
 # Path changes
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH="~/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Brew on Apple Silicon
 export PATH=/opt/homebrew/bin:$PATH
