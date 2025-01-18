@@ -11,6 +11,10 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Brew on Apple Silicon
 export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# CPPFLAGS for JDK
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 # User Docker installation
 export PATH=$HOME/.docker/bin:$PATH
@@ -30,6 +34,9 @@ eval "$(direnv hook zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Rust
+export PATH=$HOME/.cargo/bin:$PATH
 
 # zsh shell correction settings
 setopt CORRECT
@@ -98,6 +105,11 @@ POETRY_VIRTUALENVS_IN_PROJECT=true
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+if command -v nvim &> /dev/null; then
+  alias vim="nvim"
+else
+  echo "nvim not found, using vim. To install `nvim` see https://github.com/neovim/neovim/blob/master/INSTALL.md." 1>&2;
+fi
 alias zshconfig="vim ~/src/compy-config/zsh/.zshrc"
 
 tmuxgo () {
@@ -107,4 +119,3 @@ tmuxgo () {
 tmuxbranch () {
   tmux new-session -A -s "$(git rev-parse --abbrev-ref HEAD)"
 }
-
