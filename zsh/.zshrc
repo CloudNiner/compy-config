@@ -6,11 +6,11 @@ export ZSH_DISABLE_COMPFIX=true
 export EDITOR='vim'
 
 # Path changes
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Brew on Apple Silicon
-export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # CPPFLAGS for JDK
@@ -108,7 +108,7 @@ POETRY_VIRTUALENVS_IN_PROJECT=true
 if command -v nvim &> /dev/null; then
   alias vim="nvim"
 else
-  echo "nvim not found, using vim. To install `nvim` see https://github.com/neovim/neovim/blob/master/INSTALL.md." 1>&2;
+  echo "nvim not found, using vim. To install nvim see https://github.com/neovim/neovim/blob/master/INSTALL.md." 1>&2;
 fi
 alias zshconfig="vim ~/src/compy-config/zsh/.zshrc"
 
