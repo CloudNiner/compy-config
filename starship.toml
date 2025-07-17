@@ -1,0 +1,144 @@
+add_newline = false
+command_timeout = 1000
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$kubernetes\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$mise\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$direnv\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$status\
+$os\
+$container\
+$shell\
+$character"""
+
+[cmd_duration]
+disabled = true
+
+[aws]
+format = '[$symbol($profile )]($style)'
+style = 'yellow'
+symbol = 'aws:'
+
+[docker_context]
+disabled = true
+format = '[$symbol$context](cyan) '
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+truncation_length = 64
+
+[git_status]
+style = 'blue'
+conflicted = '💥'
+up_to_date = '✓'
+untracked = '*'
+stashed = 'ツ'
+modified = '☥'
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+
+[java]
+disabled = true
+format = '[${symbol}(${version} )]($style)'
+
+[kubernetes]
+contexts = [
+    { context_pattern = "(.*docker)", context_alias = "docker", style = "purple" },
+]
+disabled = false
+format = '[👾 $context]($style) '
+
+[mise]
+disabled = false
+symbol = "🍽️ "
+
+[nodejs]
+disabled = true
+format = '[$symbol($version )]($style)'
+
+[scala]
+disabled = true
+
+[package]
+disabled = true
+format = "[$symbol$version]($style) "
+
+[python]
+disabled = false
+format = '[${symbol}[(${version} )](dimmed green)${pyenv_prefix}($virtualenv )]($style)'
+style = 'green'
+
