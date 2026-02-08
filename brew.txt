@@ -1,8 +1,7 @@
-asdf
-direnv
+fish
 git
-pipx
-pyenv
+mise
 starship
 tmux
 wget
+

@@ -11,12 +11,5 @@ ln -sv "$SRC_DIR"/tmux.conf ~/.tmux.conf
 ln -sv "$SRC_DIR"/gitignore ~/.gitignore
 ln -sv "$SRC_DIR"/gitconfig ~/.gitconfig
 
-# Bash Profile
-ln -sv "$SRC_DIR"/bash_profile ~/.bash_profile
-
-# ZSH
-ln -sv "$SRC_DIR"/zsh/.zshenv ~/.zshenv
-ln -sv "$SRC_DIR"/.hushlogin ~/.hushlogin
-
 # psql
 ln -sv "$SRC_DIR"/psqlrc ~/.psqlrc
