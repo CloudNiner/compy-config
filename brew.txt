@@ -1,7 +1,8 @@
 fish
 git
 mise
+neovim
 starship
 tmux
+uv
 wget
-
