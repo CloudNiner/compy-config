@@ -3,5 +3,6 @@ direnv
 git
 pipx
 pyenv
+starship
 tmux
 wget
