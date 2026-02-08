@@ -1,7 +1,5 @@
-asdf
-direnv
+fish
 git
-pipx
-pyenv
+mise
 tmux
 wget
