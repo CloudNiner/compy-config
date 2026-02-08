@@ -124,7 +124,9 @@ format = '[👾 $context]($style) '
 
 [mise]
 disabled = false
-symbol = "🍽️ "
+symbol = "🍽️"
+healthy_symbol = "✅"
+unhealthy_symbol = '💥'
 
 [nodejs]
 disabled = true
@@ -141,4 +143,3 @@ format = "[$symbol$version]($style) "
 disabled = false
 format = '[${symbol}[(${version} )](dimmed green)${pyenv_prefix}($virtualenv )]($style)'
 style = 'green'
-
