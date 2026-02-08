@@ -15,6 +15,7 @@ ln -sv "$SRC_DIR"/gitconfig ~/.gitconfig
 
 # Fish
 mkdir -p ~/.config/fish
+rm ~/.config/fish/config.fish
 ln -sv "$SRC_DIR"/fish/config.fish ~/.config/fish/config.fish
 
 # Starship
