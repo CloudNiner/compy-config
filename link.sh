@@ -13,6 +13,11 @@ ln -sv "$SRC_DIR"/tmux.conf ~/.tmux.conf
 ln -sv "$SRC_DIR"/gitignore ~/.gitignore
 ln -sv "$SRC_DIR"/gitconfig ~/.gitconfig
 
+# Ghostty
+mkdir -p ~/.config/ghostty
+rm ~/.config/ghostty/config
+ln -sv "$SRC_DIR"/ghostty/config ~/.config/ghostty/config
+
 # Fish
 mkdir -p ~/.config/fish
 rm ~/.config/fish/config.fish
