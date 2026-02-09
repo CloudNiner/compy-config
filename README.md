@@ -5,7 +5,7 @@ Run link.sh and MAGIC.
 
 ## Edit MacOS Defaults
 
-```bash
+```shell
 ./macos.config.sh
 ```
 
@@ -20,4 +20,3 @@ Update the list with:
 ```shell
 brew leaves > brew.txt
 ```
-

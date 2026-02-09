@@ -23,3 +23,8 @@ ln -sv "$SRC_DIR"/starship.toml ~/.config/starship.toml
 
 # psql
 ln -sv "$SRC_DIR"/psqlrc ~/.psqlrc
+
+# Zed
+mkdir -p ~/.config/zed
+rm ~/.config/zed/settings.json
+ln -sv "$SRC_DIR"/zed/settings.json ~/.config/zed/settings.json
