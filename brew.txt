@@ -1,4 +1,5 @@
 fish
+fzf
 git
 mise
 neovim
@@ -6,3 +7,4 @@ starship
 tmux
 uv
 wget
+zoxide
