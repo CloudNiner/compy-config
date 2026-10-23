@@ -3,6 +3,7 @@ fzf
 git
 mise
 neovim
+rtk
 starship
 tmux
 uv
